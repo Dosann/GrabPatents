@@ -1,0 +1,81 @@
+1487916610471	geckodriver	INFO	Listening on 127.0.0.1:49578
+1487916612475	mozprofile::profile	INFO	Using profile path C:\Users\Gavin\AppData\Local\Temp\rust_mozprofile.ANbybGK5CJ4A
+1487916612484	geckodriver::marionette	INFO	Starting browser D:\tools\Firefox\firefox.exe
+1487916612532	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49592
+1487916627674 Marionette: Element is missing an accesible name -> id: TextBoxAccount, tagName: INPUT, className: 
+1487916629150 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: Password, tagName: INPUT, className: 
+1487916629272 Marionette: Element is missing an accesible name -> id: ImageButtonLogin, tagName: INPUT, className: 
+JavaScript warning: http://search.patentstar.com.cn/Js/sysdialog.js, line 45: unreachable code after return statement
+JavaScript warning: https://normandy-cloudfront.cdn.mozilla.net/static/bundles/selfrepair-a26c82c370850b1be72d.052381136c5c.js, line 7: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+1487916639013 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: , tagName: SPAN, className: lansebutton
+JavaScript warning: http://search.patentstar.com.cn/Js/sysdialog.js, line 45: unreachable code after return statement
+9246411	addons.xpi	DEBUG	New add-on loop@mozilla.org in app-system-defaults
+1486619246412	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1486619246413	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1486619246413	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1486619246414	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-system-defaults":{"loop@mozilla.org":{"d":"D:\\tools\\Firefox\\browser\\features\\loop@mozilla.org.xpi","st":1460091678473}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"D:\\tools\\Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1460091678321}}}
+1486619246427	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\Gavin\AppData\Local\Temp\rust_mozprofile.LR32gipKKWVq\extensions.json
+1486619246428	addons.xpi-utils	DEBUG	New add-on loop@mozilla.org installed in app-system-defaults
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1486619246477	DeferredSave.extensions.json	DEBUG	Save changes
+1486619246478	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1486619246480	DeferredSave.extensions.json	DEBUG	Starting timer
+1486619246481	DeferredSave.extensions.json	DEBUG	Save changes
+1486619246482	addons.xpi-utils	INFO	Hiding the updated system add-ons.
+1486619246487	addons.xpi	DEBUG	Loading bootstrap scope from D:\tools\Firefox\browser\features\loop@mozilla.org.xpi
+1486619246500	addons.xpi	DEBUG	Calling bootstrap method install on loop@mozilla.org version 1.1.14
+1486619246500	addons.xpi-utils	DEBUG	Make addon app-system-defaults:loop@mozilla.org visible
+1486619246501	DeferredSave.extensions.json	DEBUG	Save changes
+1486619246501	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1486619246501	DeferredSave.extensions.json	DEBUG	Save changes
+1486619246502	addons.xpi	DEBUG	Updating XPIState for {"id":"loop@mozilla.org","syncGUID":"2Tk6KmsMQ_JT","location":"app-system-defaults","version":"1.1.14","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox Hello Beta","description":"Web sharing for Firefox","creator":"Mozilla","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"D:\\tools\\Firefox\\browser\\features\\loop@mozilla.org.xpi","installDate":1460091678473,"updateDate":1460091678473,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4109709,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"45.0","maxVersion":"45.*"},{"id":"xpcshell@tests.mozilla.org","minVersion":"0","maxVersion":"10"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1486619246502	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1486619246502	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"16W0Cvin7963","location":"app-global","version":"45.0.2","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"D:\\tools\\Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1460091678321,"updateDate":1460091678321,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"45.0.2","maxVersion":"45.0.2"}],"targetPlatforms":[],"seen":true}
+1486619246502	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1486619246503	DeferredSave.extensions.json	DEBUG	Save changes
+1486619246503	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1486619246503	addons.xpi-utils	DEBUG	Updating add-on states
+1486619246503	addons.xpi-utils	DEBUG	Writing add-ons list
+1486619246505	addons.xpi	DEBUG	Registering manifest for D:\tools\Firefox\browser\features\loop@mozilla.org.xpi
+1486619246506	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.1.14
+1486619246517	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1486619246517	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1486619246517	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1486619246527	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1486619246527	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1486619246527	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1486619246527	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1486619246528	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1486619246528	addons.manager	DEBUG	Starting provider: GMPProvider
+1486619246532	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1486619246533	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1486619246533	addons.manager	DEBUG	Starting provider: PluginProvider
+1486619246533	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1486619246533	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1486619246533	addons.manager	DEBUG	Completed startup sequence
+1486619248179	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1486619248179	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1486619248179	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1486619248181	DeferredSave.extensions.json	DEBUG	Starting write
+1486619248549	DeferredSave.extensions.json	DEBUG	Write succeeded
+1486619248549	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1486619251684 Marionette: Element is missing an accesible name -> id: TextBoxAccount, tagName: INPUT, className: 
+1486619251739 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: Password, tagName: INPUT, className: 
+1486619251778 Marionette: Element is missing an accesible name -> id: ImageButtonLogin, tagName: INPUT, className: 
+JavaScript warning: http://search.patentstar.com.cn/Js/sysdialog.js, line 45: unreachable code after return statement
+1486619257318 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: , tagName: IMG, className: 
+JavaScript warning: http://search.patentstar.com.cn/Js/sysdialog.js, line 45: unreachable code after return statement
+1486619261505 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: , tagName: SPAN, className: lansebutton
+JavaScript warning: http://search.patentstar.com.cn/Js/sysdialog.js, line 45: unreachable code after return statement
+1486619277574	addons.xpi	DEBUG	Calling bootstrap method shutdown on loop@mozilla.org version 1.1.14
+1486619277738	addons.manager	DEBUG	shutdown
+1486619277739	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1486619277739	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1486619277739	addons.xpi	DEBUG	shutdown
+1486619277739	addons.xpi-utils	DEBUG	shutdown
+1486619277740	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1486619277740	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1486619277741	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1486619277743	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1486619277746	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1486619277750	addons.manager	DEBUG	Async provider shutdown done
