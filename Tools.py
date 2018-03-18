@@ -11,8 +11,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import re
-from string import strip
-from MySQLdb import Connection
+import pymysql
+pymysql.install_as_MySQLdb()
+from pymysql import Connection
 
 class SeleniumSupport:
     
@@ -29,7 +30,7 @@ class SeleniumSupport:
         WebDriverWait(driver,20,0.5).until(EC.presence_of_element_located(locator))
         eles=driver.find_elements_by_class_name("ipc_c")
         count=len(eles)-1
-        print "subcategory count:",count
+        print("subcategory count:",count)
         return count
     
     @staticmethod
@@ -74,7 +75,7 @@ class SeleniumSupport:
     def GetTextByXpath(driver,xpath):
         SeleniumSupport.WaitUntilPresence(driver,xpath)
         txt=driver.find_element_by_xpath(xpath).text
-        return strip(txt)
+        return txt.strip()
     
     @staticmethod
     def JumpPage(driver,page):
@@ -146,6 +147,16 @@ class DatabaseSupport:
         
         if 'patentdetails' not in tables:
             DatabaseSupport.CreatePatentdetails(cur)
+        if 'patenturl' not in tables:
+            DatabaseSupport.CreatePatentUrl(cur)
+    
+    @staticmethod
+    def CreatePatentUrl(cur):
+        cmd="""create table patenturl(id int auto_increment primary key,
+                            applicantid varchar(100),
+                            cateindex varchar(100),
+                            url varchar(200))"""
+        cur.execute(cmd)
     
     @staticmethod
     def CreatePatentdetails(cur):
@@ -165,7 +176,7 @@ class Filter:
     def FilterNumber(s):
         result=re.findall('\d+',s)
         if len(result)==0:
-            print "error: can't find numbers"
+            print("error: can't find numbers")
         else:
             return result[0]
     

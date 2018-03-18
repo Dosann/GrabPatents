@@ -1,18 +1,6 @@
 PhantomJS is launching GhostDriver...
-[INFO  - 2017-03-09T03:14:10.167Z] GhostDriver - Main - running on port 57682
-[INFO  - 2017-03-09T03:14:12.844Z] Session [7842b860-0476-11e7-99e4-e53d1a89b743] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
-[INFO  - 2017-03-09T03:14:12.844Z] Session [7842b860-0476-11e7-99e4-e53d1a89b743] - page.customHeaders:  - {}
-[INFO  - 2017-03-09T03:14:12.844Z] Session [7842b860-0476-11e7-99e4-e53d1a89b743] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"windows-8-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-03-09T03:14:12.844Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7842b860-0476-11e7-99e4-e53d1a89b743
-[INFO  - 2017-03-09T03:19:10.168Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[ERROR - 2017-03-09T03:22:34.583Z] Session [78421c20-0476-11e7-9fbe-8d92b4624a8c] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating 'Sys.WebForms.PageRequestManager')
-[ERROR - 2017-03-09T03:22:34.583Z] Session [78421c20-0476-11e7-9fbe-8d92b4624a8c] - page.onError - stack:
-  (anonymous function) (http://search.patentstar.com.cn/my/frmPatDetails.aspx?Id=9EGD5FAA6DCA9GBE9GBA9DIC9GAGBGDA9EHC3BCA9DIE9DHB&xy=16342766&qy=%20(A01%2FIC):414)
-] Session [783f8410-0476-11e7-94dc-dfe28ed521c0] - page.onError - stack:
-  (anonymous function) (http://search.patentstar.com.cn/my/frmPatDetails.aspx?Id=9BHB6CEA7ECA9GCF9DGC9FEB2ACA8BFA9IGG9HBDGHIA9FBC&xy=16343165&qy=%20(A01%2FIC):414)
-[ERROR - 2017-03-09T03:23:35.061Z] Session [783f8410-0476-11e7-94dc-dfe28ed521c0] - page.onError - msg: SyntaxError: Parse error
-[ERROR - 2017-03-09T03:23:35.061Z] Session [783f8410-0476-11e7-94dc-dfe28ed521c0] - page.onError - stack:
-
-[ERROR - 2017-03-09T03:23:35.071Z] Session [783f8410-0476-11e7-94dc-dfe28ed521c0] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating 'Sys.WebForms.PageRequestManager')
-[ERROR - 2017-03-09T03:23:35.071Z] Session [783f8410-0476-11e7-94dc-dfe28ed521c0] - page.onError - stack:
-  (anonymous function) (http://search.patentstar.com.cn/my/frmPatDetails.aspx?Id=9DHD9IDC9IHH9DAA9BGA9ICB9BDEFIGA7AAA9HGH9ICG9CDA&xy=16342709&qy=%20(A01%2FIC):414)
+[INFO  - 2018-03-18T04:51:23.373Z] GhostDriver - Main - running on port 54405
+[INFO  - 2018-03-18T04:51:25.793Z] Session [0376c1c0-2a68-11e8-8b26-6726bc1a7dd9] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2018-03-18T04:51:25.793Z] Session [0376c1c0-2a68-11e8-8b26-6726bc1a7dd9] - page.customHeaders:  - {}
+[INFO  - 2018-03-18T04:51:25.793Z] Session [0376c1c0-2a68-11e8-8b26-6726bc1a7dd9] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"windows-8-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-03-18T04:51:25.793Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0376c1c0-2a68-11e8-8b26-6726bc1a7dd9

@@ -7,9 +7,9 @@ Created on Thu Feb 09 12:14:06 2017
 
 from selenium import webdriver
 import time
-import MySQLdb
+import pymysql
+pymysql.install_as_MySQLdb()
 import Tools
-from string import strip
 import traceback
 
 
@@ -19,7 +19,7 @@ class CrawlPatentProfile:
         self.baseurl="""http://search.patentstar.com.cn/frmLogin.aspx"""
         self.cateurl="""http://search.patentstar.com.cn/My/frmIPCSearch.aspx"""
         
-        self.conn=MySQLdb.Connection(
+        self.conn=pymysql.Connection(
                     host="localhost",
                     port=3306,
                     user='root',
@@ -27,14 +27,13 @@ class CrawlPatentProfile:
                     db='grabpatents',
                     charset='utf8')
         
-        self.driver=webdriver.PhantomJS()
+        self.driver=webdriver.Chrome()
         '''
         chromeOptions=webdriver.ChromeOptions()
-        prefs={"download.default_directory":"D:\Codes\PythonGrabPatents\PatentFiles"}
+        prefs={"download.default_directory":"%codesources/grabpatents/"}
         chromeOptions.add_experimental_option("prefs",prefs)
         self.driver = webdriver.Chrome(chrome_options=chromeOptions)
         '''
-        
         self.driver.set_window_size(windowpara[0],windowpara[1])
         self.driver.set_window_position(windowpara[2],windowpara[3])
         
@@ -65,7 +64,7 @@ class CrawlPatentProfile:
         try:
             i=cateindex
             while i<9:
-                print i
+                print(i)
                 catexpath="""//*[@id="listIPC"]/li["""+str(i)+"""]/a"""
                 Tools.SeleniumSupport.PushButtonByXpath(self.driver,catexpath)
                 time.sleep(2)
@@ -78,7 +77,7 @@ class CrawlPatentProfile:
                     j=subcateindex
                 
                 while j<subcateCount+1:
-                    print i,j
+                    print(i,j)
                     subcatexpath="""//*[@id="ipc_result"]/li["""+str(j+1)+"""]/div[3]/span[1]"""
                     if i!=cateindex or j!=subcateindex:
                         self.JumpToCate()
@@ -112,7 +111,7 @@ class CrawlPatentProfile:
                         Tools.SeleniumSupport.JumpPage(self.driver,currentpage)
                         
                     while True:
-                        print i,j,currentpage,time.ctime()
+                        print(i,j,currentpage,time.ctime())
                         time.sleep(2)
                         #for k in range(1,3):
                         for k in range(1,patentpagelist[currentpage]+1):
@@ -130,13 +129,12 @@ class CrawlPatentProfile:
                     j+=1
                 i+=1
         except:
-            print "error:",i,j,currentpage
+            print("error:",i,j,currentpage)
             self.driver.close()
             return [i,j,currentpage]
         return True
 
-    def CrawlUrl(self,rangeinfo,numberpercate,turnpage,patentnumber):
-        self.patentnumber=patentnumber
+    def CrawlUrl(self,rangeinfo,numberpercate,turnpage):
         cateindex,subcateindex,pageindex,endcateindex,endsubcateindex=rangeinfo
         i=cateindex
         j=subcateindex
@@ -144,7 +142,7 @@ class CrawlPatentProfile:
         try:
             i=cateindex
             while i<9 and i<=endcateindex:
-                print i
+                print(i)
                 if i!=cateindex or j!=subcateindex:
                     self.JumpToCate()
                 catexpath="""//*[@id="listIPC"]/li["""+str(i)+"""]/a"""
@@ -157,7 +155,7 @@ class CrawlPatentProfile:
                     j=subcateindex
                 
                 while j<subcateCount+1 and (i<endcateindex or j<=endsubcateindex):
-                    print i,j
+                    print(i,j)
                     subcatexpath="""//*[@id="ipc_result"]/li["""+str(j+1)+"""]/div[3]/span[1]"""
                     if i!=cateindex or j!=subcateindex:
                         self.JumpToCate()
@@ -192,7 +190,7 @@ class CrawlPatentProfile:
                     
                     reference=''
                     while True:
-                        print i,j,currentpage,time.ctime()
+                        print(i,j,currentpage,time.ctime())
                         time.sleep(1)
                         Tools.SeleniumSupport.WaitUntilTurnpageFinished(self.driver,reference)
                         
@@ -210,7 +208,7 @@ class CrawlPatentProfile:
                             datapairs[k]=(applicantid,cateindex,url)
                         reference=self.driver.find_element_by_xpath("""//*[@id="divlist"]/ul/li[1]/div[1]/a""").text
                         Tools.SaveData.SaveData(self.conn,datapairs,'patenturl',['applicantid','cateindex','url'])
-                        print 'successfully saved. inserted items count:',len(datapairs),'pos:',i,j,currentpage
+                        print('successfully saved. inserted items count:',len(datapairs),'pos:',i,j,currentpage)
                         currentpage+=1
                         if currentpage>pagecount:
                             break
@@ -221,9 +219,9 @@ class CrawlPatentProfile:
                 i+=1
                 j=1
         
-        except Exception,e:
-            print "error:",i,j,currentpage
-            print e
+        except Exception as e:
+            print("error:",i,j,currentpage)
+            print(e)
             self.driver.close()
             return [i,j,currentpage,endcateindex,endsubcateindex]
         
@@ -235,7 +233,7 @@ class CrawlPatentProfile:
         while not que.empty():
             try:
                 current,url=que.get()
-                print current,time.ctime()
+                print(current,time.ctime())
                 self.driver.get(url)
                 mingchen=Tools.SeleniumSupport.GetTextByXpath(self.driver,"""//*[@id="tabMianXml"]/b/span""")
                 shenqinghao=Tools.SeleniumSupport.GetTextByXpath(self.driver,"""//*[@id="tdApno"]""")
@@ -281,14 +279,14 @@ class CrawlPatentProfile:
                 columns=['originid','mingchen','shenqinghao','shenqingri','guojiashengshi','gongkaihao','gongkairi','zhufenleihao','sqgongkaihao','sqgongkairi','fenleihao',
                          'shenqingren','famingren','dailiren','dailijigou','shenqingrendizhi','youxianquan','zhaiyao','zhuquanliyaoqiu','falvzhuangtai','url']
                 Tools.SaveData.SaveData(self.conn,details,"patentdetails",columns)
-                print threadname,"successfully saved details of patent:",current,time.ctime()
+                print(threadname,"successfully saved details of patent:",current,time.ctime())
                 download_count+=1
-            except Exception,e:
-                print threadname,"Error when crawling, current patent:",current
-                print e
+            except Exception as e:
+                print(threadname,"Error when crawling, current patent:",current)
+                print(e)
                 traceback.print_exc()
                 self.que.put((current,url))
-                print "Failed mission has been put back into que:",current
+                print("Failed mission has been put back into que:",current)
                 self.driver.quit()
                 self.conn.close()
                 return False,download_count

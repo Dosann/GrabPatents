@@ -20,7 +20,7 @@ class SpiderPatents:
     
     # begin crawling
     def BeginCrawling(self):
-        self.c=Crawl.CrawlPatentProfile(self.numberpercate,self.windowpara)
+        self.c=Crawl.CrawlPatentProfile(self.windowpara)
         self.c.Login()
         self.c.JumpToCate()
         
@@ -33,16 +33,17 @@ class SpiderPatents:
         return result
 
 
-startcate=int(raw_input('startcate:'))
-startsubcate=int(raw_input('startsubcate:'))
-startpage=int(raw_input('startpage:'))
-endcate=int(raw_input('endcate:'))
-endsubcate=int(raw_input('endsubcate:'))
+startcate=int(input('startcate:'))
+startsubcate=int(input('startsubcate:'))
+endcate=int(input('endcate:'))
+endsubcate=int(input('endsubcate:'))
+startpage=int(input('startpage:'))
 windowpara=['']*4
-windowpara[0]=int(raw_input('windowsizex:'))
-windowpara[1]=int(raw_input('windowsizey:'))
-windowpara[2]=int(raw_input('windowposx:'))
-windowpara[3]=int(raw_input('windowposy:'))
+windowpara[0]=int(input('windowsizex:'))
+windowpara[1]=int(input('windowsizey:'))
+windowpara[2]=int(input('windowposx:'))
+windowpara[3]=int(input('windowposy:'))
+num_patents_persubcate = int(input('num_patents_persubcate:'))
 '''
 print sys.argv,len(sys.argv)
 startcate=int(sys.argv[1])
@@ -52,15 +53,15 @@ endcate=int(sys.argv[4])
 endsubcate=int(sys.argv[5])
 '''
 
-print "input finished"
-windowpara=map(lambda x:int(x),windowpara)
+print("input finished")
+windowpara=list(map(lambda x:int(x),windowpara))
 s=SpiderPatents(1000,windowpara)
 s.BeginCrawling()
 
-result=(startcate,startsubcate,startpage,endcate,endsubcate)
-while result!=True:
-    result=s.CrawlUrl(result)
-    if result!=True:
+rangeinfo=(startcate,startsubcate,startpage,endcate,endsubcate)
+while rangeinfo!=True:
+    rangeinfo=s.CrawlUrl(rangeinfo)
+    if rangeinfo!=True:
         del(s)
-        s=SpiderPatents(1000,windowpara)
+        s=SpiderPatents(num_patents_persubcate,windowpara)
         s.BeginCrawling()
